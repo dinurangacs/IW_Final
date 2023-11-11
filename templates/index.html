@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html style="font-size: 16px" lang="en">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charset="utf-8" />
+      <title>Malware Detection</title>
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+      <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" media="screen" />
+      <link id="u-theme-google-font" rel="stylesheet" href="https://font.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
+   </head>
+   <body>
+      <header>
+         <div class="logo">
+            <img class="logoImg" src="{{url_for('static',filename='images/malware-logo-new.png')}}" alt="" width="80px" />
+            <B><center><p class="logotext">MALrm-Deep Learning Based Malware Detection Tool</p><center>
+         </div>
+         <nav>
+            <ul>
+               
+              
+               
+            </ul>
+         </nav>
+      </header>
+      
+      </div>
+<div class="div1-project">
+            <h1>
+               <span> WELCOME TO</span> <br />
+               MALWARE DETECTION <br />
+               PROJECT
+            </h1>
+            <hr />
+         </div> <div id="UploadSection" class="reveal">
+         <center><h6>UPLOAD YOUR FILE</h6>
+         <form method="post" action="{{url_for('uploadFile')}}" enctype="multipart/form-data">
+            <div class="area">
+               <h5 id="fileName"></h5>
+               <input type="file" name="file" id="upload" accept=".exe" />
+            </div>
+            <input type="submit" name="scan" class="visible" id="custom-btn" value="scan now" hidden />
+         </form>
+      </div>
+     
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+      {% with messages = get_flashed_messages(with_categories=True) %} {% if messages %} {% for category, message in messages %} {% if category == 'success' %}
+      <script>
+         $(document).ready(function () {
+            $('#ok').modal('show');
+         });
+      </script>
+      {% elif category == 'error' %}
+      <script>
+         $(document).ready(function () {
+            $('#sus').modal('show');
+         });
+      </script>
+      {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+      <!-- Modal 1 suspecious file -->
+      <div class="modal fade" id="sus" tabindex="-1" role="dialog" aria-labelledby="susTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="susLongTitle">Result</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="width: 40px">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body text-center" style="height: 200px; font-size: 30px; color: rgb(55, 54, 55); font-family: Roboto, sans-serif; font-weight: 300px">
+                  The file is suspicious
+                  <br />
+                  <img src="{{url_for('static',filename='images/warning.png')}}" alt="" width="100px" />
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary closebtn" data-bs-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Modal 2 benign file -->
+      <div class="modal fade" id="ok" tabindex="-1" role="dialog" aria-labelledby="okTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="okLongTitle">Result</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" style="width: 40px">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body text-center" style="height: 200px; font-size: 30px; color: rgb(55, 54, 55); font-family: Roboto, sans-serif; font-weight: 300px">
+                  The file is benign
+                  <br />
+                  <img src="{{url_for('static',filename='images/ok.png')}}" alt="" width="100px" />
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary closebtn" data-bs-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+  
+      <hr class="horizontal" style="clear: both" />
+    
+         
+      </div>
+      <footer>
+         <br />
+         <p>&copy; Liyanage N.D.H IT20215088.</p>
+      </footer>
+
+      <script type="text/javascript" src="{{url_for('static',filename='script.js')}}"></script>
+   </body>
+</html>

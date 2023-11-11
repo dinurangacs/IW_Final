@@ -1,0 +1,675 @@
+@import '~bootstrap/scss/bootstrap.scss';
+html {
+   scroll-behavior: smooth;
+}
+body {
+   font-family: 'Open Sans', sans-serif;
+   margin: 0;
+}
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: inline;
+}
+nav ul li {
+   display: inline;
+   color: #111111;
+}
+
+a {
+   text-decoration: none;
+   padding: 0.5rem;
+   color: #000000;
+}
+.logo,
+nav {
+   display: inline;
+   font-size: inherit;
+   font-family: inherit;
+   line-height: 1;
+   letter-spacing: inherit;
+   text-transform: inherit;
+   font-style: inherit;
+}
+nav {
+   pointer-events: initial;
+   margin: 0 0 0 auto;
+   opacity: 1;
+   display: table;
+   white-space: nowrap;
+   position: relative;
+   line-height: 1;
+   box-sizing: border-box;
+}
+.logoImg {
+   border-style: none;
+   white-space: nowrap;
+   float: left;
+   line-height: 3;
+}
+
+header {
+   width: 93%;
+   background-image: none;
+   color: #111111;
+   background-color: #ffffff;
+   border-top: 0.938rem solid;
+   border-image: linear-gradient(to right, #2d2d2d, #fc4772) 1;
+   border-radius: 0.25rem;
+   margin-top: 1.875rem;
+   margin-left: 3.75rem;
+   margin-right: 3.75rem;
+   height: 6.938rem;
+   width: auto;
+   font-family: Arial, Helvetica, sans-serif;
+   color: rgb(0, 0, 0);
+   box-shadow: 8px 8px 5px rgb(60, 67, 69);
+   font-size: 1.188rem;
+   font-weight: normal;
+}
+
+header a:visited,
+header a:active {
+   color: #000000;
+}
+header a:hover {
+   color: #f25659;
+   font-size: 1.156rem;
+}
+.logotext {
+   margin-top: 1rem;
+}
+#Home {
+   display: flex;
+   flex-wrap: wrap;
+   height: 35rem;
+   padding-top: 9rem;
+   justify-content: center;
+}
+
+.div1-home h1 {
+   font-family: 'Rockwell';
+   font-weight: 400;
+   font-size: 4.5rem;
+   overflow: auto;
+   text-align: center;
+   color: #141414;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.div1-home h6 {
+   font-size: 1.125rem;
+   line-height: 4;
+   color: #686868;
+   text-align: center;
+}
+.div1-home button,
+.div2-project button,
+.contact-form input[type='submit'],
+#custom-btn,
+.closebtn {
+   margin: auto;
+   display: block;
+   width: 15rem;
+   height: 5rem;
+   text-align: center;
+   text-transform: uppercase;
+   background-size: 200% auto;
+   color: white;
+   border-radius: 5.625rem;
+   border: 0;
+   box-shadow: 0 3px 0 0 #6248dc;
+   transition: all 0.3s ease-in-out;
+   font-size: 1.25rem;
+   overflow: visible;
+   outline: none;
+   box-sizing: border-box;
+   pointer-events: initial;
+   cursor: pointer;
+   background: rgb(0, 0, 0);
+   background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 70, 93, 1) 100%);
+}
+
+.div1-home button:hover,
+.div2-project button:hover,
+.contact-form input[type='submit']:hover,
+#custom-btn:hover,
+.closebtn:hover {
+   background-position: right center;
+   color: #fff;
+   text-decoration: none;
+}
+
+h5 {
+   line-height: 4;
+}
+
+li {
+   color: black;
+   font-size: 1.125rem;
+   margin-right: 2rem;
+}
+.lastitem {
+   margin-right: 2rem;
+}
+
+.div1-home {
+   width: 50rem;
+   float: left;
+}
+
+.closebtn {
+   width: 7.5rem;
+   height: 2.5rem;
+}
+#custom-btn {
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   width: 43%;
+   height: 3.125rem;
+   margin-top: 1rem;
+   border: none;
+   outline: none;
+   border-radius: 1.563rem;
+   color: #fff;
+   font-size: 1.125rem;
+   font-weight: 500;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+.div1-home button a,
+.div2-project button a {
+   color: white;
+   cursor: pointer;
+}
+.div2-home {
+   float: left;
+}
+.div2-home .img1 {
+   width: 20rem;
+   height: 20rem;
+   margin: 0 auto 0;
+   animation-name: floating;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
+   transform: translateY(0);
+   opacity: 1;
+   object-fit: contain;
+   background-size: contain;
+   position: relative;
+   transition: 1s all ease;
+   margin: auto;
+}
+.div2-home .img2 {
+   width: 10rem;
+   height: 10rem;
+   animation-name: floating;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
+   transform: translateY(0);
+   opacity: 1;
+   object-fit: contain;
+   background-size: contain;
+   position: relative;
+   transition: 1s all ease;
+}
+
+#UploadSection {
+   width: 100%;
+   height: 43.75rem;
+   background-image: url('images/1.png');
+   background-repeat: no-repeat;
+}
+
+.div1-project h1,
+#Contact h1,
+#UploadSection h1,
+.title {
+   font-weight: 900;
+   opacity: 1;
+   font-size: 3rem;
+   line-height: 1.1;
+   position: relative;
+   word-wrap: break-word;
+   font-family: Roboto, sans-serif;
+   box-sizing: border-box;
+   text-align: left;
+   text-align: center;
+   margin-top: 6rem;
+}
+
+#UploadSection h1 {
+   padding-top: 7rem;
+}
+/* اتاكد  */
+.horizontal {
+   clear: both;
+   margin-top: 1.875rem;
+   margin-bottom: 3.75rem;
+   transform-origin: right center 0px;
+   stroke: none;
+   border-right-width: 0;
+   border-left-width: 0;
+   border-bottom-width: 0;
+   border-color: #454545;
+   border-width: 0.113rem;
+   border-style: solid;
+   text-align: center;
+   width: 75% !important;
+   margin: auto;
+   position: relative;
+   box-sizing: border-box;
+}
+
+.area {
+   border: 2px dashed grey;
+   background-image: url('./images/uplaod-new.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 4rem 4rem;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   text-align: center;
+   background-color: #ffffff;
+   border-radius: 3%;
+   width: 40rem;
+   height: 22rem;
+   margin: auto;
+}
+
+.area input {
+   width: 400%;
+   height: 100%;
+   margin-left: -300%;
+   border: none;
+   cursor: pointer;
+}
+
+.area input:focus {
+   outline: none;
+}
+
+.area .spinner {
+   display: none;
+   margin-top: 50%;
+}
+
+.area:hover,
+.area.dragging,
+.area.uploading {
+   -khtml-opacity: 0.8;
+   -moz-opacity: 0.8;
+   opacity: 0.8;
+}
+
+.area.uploading {
+   background: none;
+}
+#Project {
+   height: 39.375rem;
+   margin-top: 8rem;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+#Project div h1,
+#Project div {
+   display: inline;
+}
+
+.div1-project h1 span {
+   font-size: 1.5rem;
+   font-weight: 700;
+   opacity: 1;
+   padding: 0;
+   position: relative;
+   transition: 1s all ease;
+   background: linear-gradient(to right, #2d2d2d, #fc4772);
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   word-wrap: break-word;
+   font-family: Roboto, sans-serif;
+   box-sizing: border-box;
+   text-align: left;
+}
+.div1-project {
+   margin: 0 auto;
+}
+/* ارجع اتاكد  */
+.div1-project hr,
+#Team hr,
+#Contact hr {
+   width: 4.813rem;
+   position: relative;
+   transform-origin: left center 0;
+   margin: 1.875rem auto 0 0;
+   color: #6248dc;
+}
+.div2-project {
+   margin: 0 auto;
+   max-width: 34.375rem;
+}
+
+.div2-project p {
+   opacity: 1;
+   font-size: 1.125rem;
+   line-height: 1.6;
+   position: relative;
+   transition: 1s all ease;
+   word-wrap: break-word;
+   padding: 0;
+   box-sizing: border-box;
+   text-align: left;
+   font-family: 'Open Sans', sans-serif;
+}
+
+.div2-project button {
+   width: 12.5rem;
+   height: 3.75rem;
+   margin-left: 0;
+   margin-top: 1rem;
+}
+#Team {
+   width: 80%;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+#Team img,
+.supervisor img {
+   border-radius: 50%;
+   border: 2px #6d4cdf solid;
+}
+.supervisor img {
+   display: block;
+   margin: auto;
+}
+#Team div,
+.supervisor div {
+   display: inline;
+   margin-top: 5rem;
+   text-align: center;
+}
+#Team h3 {
+   line-height: 2;
+}
+#Team a,
+.supervisor a {
+   color: #6d4cdf;
+}
+.supervisor {
+   /* width: 80%; */
+   margin: 0 auto;
+}
+
+.contact-form {
+   padding: 0.625rem;
+   margin-left: -1.25rem;
+   width: calc(100% + 1.25rem);
+   flex-wrap: wrap;
+   align-items: flex-end;
+   box-sizing: border-box;
+   pointer-events: initial;
+   font-size: 1rem;
+   line-height: 1.6;
+}
+.contact-form input[type='text'],
+.contact-form input[type='email'],
+.contact-form textarea {
+   border-color: #000000;
+   stroke: #000000;
+   border-width: 2px;
+   background-color: #ffffff;
+   border-style: solid;
+   border-radius: 0;
+   display: block;
+   width: 70%;
+   padding: 0.625rem 0.75rem;
+   background-image: none;
+   background-clip: padding-box;
+   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   color: inherit;
+   height: auto;
+   outline: none;
+   overflow: visible;
+   margin: auto;
+   border-left-style: none;
+   border-right-style: none;
+   border-top-style: none;
+   font-size: 1rem;
+}
+#Contact {
+   width: 50%;
+   margin: auto;
+}
+.contact-form input[type='submit']:hover {
+   cursor: pointer;
+}
+
+footer {
+   margin-top: 1.875rem;
+   color: #ffffff;
+   background-color: #333333;
+   text-align: center;
+   font-size: 1rem;
+   line-height: 1.6;
+   height: 6.25rem;
+}
+
+.reveal {
+   transform: translateY(-3.125rem);
+   opacity: 0;
+   transition: all 2s ease;
+}
+.reveal.active {
+   transform: translateY(0px);
+   opacity: 1;
+}
+
+.remove {
+   background-image: none;
+}
+
+#fileName {
+   font-size: 1.563rem;
+   margin-top: 8.938rem;
+   color: #454545;
+}
+
+/*responsive */
+
+@media (max-width: 990px) {
+   #Home {
+      flex-direction: column;
+      height: 25rem;
+   }
+   .div1-home {
+      width: 30rem;
+   }
+
+   .div1-home h1 {
+      font-size: 3rem;
+   }
+   .div1-home h6 {
+      font-size: 1rem;
+   }
+   .div1-home button {
+      width: 12.5rem;
+      height: 3.125rem;
+   }
+
+   .div1-project {
+      margin-left: 2rem;
+   }
+   #Team div p,
+   .supervisor div p {
+      font-size: 0.8rem;
+   }
+}
+
+@media (max-width: 892px) {
+   .div2-home .img1 {
+      width: 16rem;
+      height: 16rem;
+   }
+   .div2-home .img2 {
+      width: 7rem;
+      height: 7rem;
+   }
+   #Team div p,
+   .supervisor div p {
+      font-size: 0.7rem;
+   }
+}
+
+@media (max-width: 775px) {
+   .logotext {
+      font-size: 0.8rem;
+   }
+   header li {
+      font-size: 15px;
+   }
+   .div1-home h1 {
+      font-size: 2.9rem;
+   }
+   .div1-home h6 {
+      font-size: 0.8rem;
+   }
+   .div2-home .img1 {
+      width: 14rem;
+      height: 14rem;
+   }
+   .div2-home .img2 {
+      width: 4rem;
+      height: 4rem;
+   }
+   .horizontal {
+      margin-top: 3rem;
+   }
+
+   #Team {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .contact-form input[type='text'],
+   .contact-form input[type='email'],
+   .contact-form textarea {
+      width: 90%;
+   }
+   #Team div p,
+   .supervisor div p {
+      font-size: 1rem;
+   }
+}
+
+@media (max-width: 635px) {
+   #Home {
+      flex-direction: row;
+      height: 40rem;
+   }
+   .div1-home {
+      width: 50rem;
+   }
+
+   .div1-home h1 {
+      font-size: 3rem;
+   }
+   .div1-home h6 {
+      font-size: 1rem;
+   }
+   .div2-home .img1 {
+      width: 17rem;
+      height: 17rem;
+      margin-left: 11rem;
+   }
+   .div2-home .img2 {
+      width: 5rem;
+      height: 5rem;
+   }
+   .div1-home button {
+      font-size: 1rem;
+   }
+
+   .area {
+      width: 30rem;
+      height: 15rem;
+   }
+   #Project {
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .div2-project button {
+      margin: auto;
+      margin-top: 1rem;
+   }
+   #Team {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .div1-project h1,
+   #Contact h1,
+   #UploadSection h1,
+   .title {
+      font-weight: 600;
+      font-size: 2rem;
+   }
+   .div2-home .img2 {
+      visibility: hidden;
+   }
+}
+
+@media (max-width: 450px) {
+   nav li {
+      margin: 0;
+   }
+   .div2-home .img1 {
+      margin-left: 4rem;
+   }
+   .area {
+      width: 20rem;
+      height: 15rem;
+   }
+   #Project {
+      height: 40rem;
+   }
+   #Project p {
+      margin: 2rem;
+   }
+   .pr {
+      margin-top: 24rem;
+   }
+   .contact-form input[type='text'],
+   .contact-form input[type='email'],
+   .contact-form textarea {
+      width: 100%;
+   }
+   .div1-project h1,
+   #Contact h1,
+   #UploadSection h1,
+   .title {
+      font-weight: 600;
+      font-size: 2rem;
+   }
+}
+
+@media (max-width: 325px) {
+}
+
+@keyframes floating {
+   0% {
+      transform: translate(0, 0px);
+   }
+   50% {
+      transform: translate(0, 15px);
+   }
+   100% {
+      transform: translate(0, -0px);
+   }
+}
